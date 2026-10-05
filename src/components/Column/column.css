@@ -1,0 +1,67 @@
+.kanban-column {
+  background-color: var(--column-bg);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+  max-height: calc(100vh - 120px);
+}
+
+.column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.column-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.column-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.column-counter {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+.column-cards-container {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 100px;
+  padding-right: 4px;
+}
+
+/* Стилізація скроллбара для колонок */
+.column-cards-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.column-cards-container::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+.kanban-column.drag-over {
+  border: 2px dashed var(--primary-color);
+  background-color: rgba(59, 130, 246, 0.05);
+}
+
+.kanban-card.dragging {
+  opacity: 0.4;
+}
